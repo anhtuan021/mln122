@@ -87,7 +87,7 @@ const quizQuestions: Question[] = [
   },
   {
     id: 8,
-    level: "Trung b��nh",
+    level: "Trung bình",
     text: "Vai trò của Nhà nước trong việc đảm bảo hài hòa lợi ích là:",
     options: [
       "Trung gian điều tiết và định hướng",
@@ -160,7 +160,7 @@ const quizQuestions: Question[] = [
     options: [
       "Khoán trắng cho doanh nghiệp",
       "Kiểm soát tham nhũng và lợi ích nhóm",
-      "Gi���m vai trò quản lý",
+      "Giảm vai trò quản lý",
       "Bỏ chính sách phúc lợi",
     ],
     correct: 1,
@@ -273,46 +273,50 @@ export default function QuizGame() {
 
   if (!selectedDifficulty) {
     return (
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="p-8 border-2 border-primary text-center rounded-xl bg-white shadow-sm">
-          <div className="mb-8">
-            <h2 className="text-4xl font-bold text-primary mb-4">Chọn Mức Độ</h2>
-            <p className="text-lg text-foreground/80 mb-8">Bạn muốn thử thách mức độ nào?</p>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="p-10 border-2 border-primary text-center rounded-2xl bg-white shadow-xl">
+          <div className="mb-10">
+            <h2 className="text-5xl font-bold text-primary mb-4">Chọn Mức Độ Thử Thách</h2>
+            <p className="text-xl text-foreground/70 mb-2">Bạn muốn thử thách mức độ nào?</p>
+            <p className="text-sm text-foreground/50">Mỗi mức độ có 5 câu hỏi với số điểm khác nhau</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             <button
               onClick={() => handleSelectDifficulty("Dễ")}
-              className="p-8 rounded-lg border-2 border-green-300 bg-green-50 dark:bg-green-950 hover:shadow-lg transition-all transform hover:scale-105"
+              className="p-10 rounded-2xl border-3 border-green-400 bg-gradient-to-br from-green-50 to-green-100 hover:shadow-2xl transition-all transform hover:scale-105 hover:border-green-500"
             >
-              <div className="text-5xl mb-4">🟢</div>
-              <h3 className="text-2xl font-bold text-green-800 dark:text-green-100 mb-2">Dễ</h3>
-              <p className="text-green-700 dark:text-green-200 mb-4">5 câu hỏi</p>
-              <p className="text-sm text-green-600 dark:text-green-300">5 điểm/câu</p>
+              <div className="text-6xl mb-6">🟢</div>
+              <h3 className="text-3xl font-bold text-green-800 mb-3">Dễ</h3>
+              <p className="text-green-700 mb-4 font-semibold">5 câu hỏi</p>
+              <p className="text-sm text-green-600 font-bold">⭐ 5 điểm/câu</p>
+              <p className="text-xs text-green-600 mt-2">Tối đa: 25 điểm</p>
             </button>
 
             <button
               onClick={() => handleSelectDifficulty("Trung bình")}
-              className="p-8 rounded-lg border-2 border-yellow-300 bg-yellow-50 dark:bg-yellow-950 hover:shadow-lg transition-all transform hover:scale-105"
+              className="p-10 rounded-2xl border-3 border-amber-400 bg-gradient-to-br from-amber-50 to-amber-100 hover:shadow-2xl transition-all transform hover:scale-105 hover:border-amber-500"
             >
-              <div className="text-5xl mb-4">🟡</div>
-              <h3 className="text-2xl font-bold text-yellow-800 dark:text-yellow-100 mb-2">Trung Bình</h3>
-              <p className="text-yellow-700 dark:text-yellow-200 mb-4">5 câu hỏi</p>
-              <p className="text-sm text-yellow-600 dark:text-yellow-300">10 điểm/câu</p>
+              <div className="text-6xl mb-6">🟡</div>
+              <h3 className="text-3xl font-bold text-amber-800 mb-3">Trung Bình</h3>
+              <p className="text-amber-700 mb-4 font-semibold">5 câu hỏi</p>
+              <p className="text-sm text-amber-600 font-bold">⭐⭐ 10 điểm/câu</p>
+              <p className="text-xs text-amber-600 mt-2">Tối đa: 50 điểm</p>
             </button>
 
             <button
               onClick={() => handleSelectDifficulty("Khó")}
-              className="p-8 rounded-lg border-2 border-red-300 bg-red-50 dark:bg-red-950 hover:shadow-lg transition-all transform hover:scale-105"
+              className="p-10 rounded-2xl border-3 border-red-400 bg-gradient-to-br from-red-50 to-red-100 hover:shadow-2xl transition-all transform hover:scale-105 hover:border-red-500"
             >
-              <div className="text-5xl mb-4">🔴</div>
-              <h3 className="text-2xl font-bold text-red-800 dark:text-red-100 mb-2">Khó</h3>
-              <p className="text-red-700 dark:text-red-200 mb-4">5 câu hỏi</p>
-              <p className="text-sm text-red-600 dark:text-red-300">15 điểm/câu</p>
+              <div className="text-6xl mb-6">🔴</div>
+              <h3 className="text-3xl font-bold text-red-800 mb-3">Khó</h3>
+              <p className="text-red-700 mb-4 font-semibold">5 câu hỏi</p>
+              <p className="text-sm text-red-600 font-bold">⭐⭐⭐ 15 điểm/câu</p>
+              <p className="text-xs text-red-600 mt-2">Tối đa: 75 điểm</p>
             </button>
           </div>
 
-          <p className="text-sm text-muted-foreground mt-8">Gợi ý: Hãy bắt đầu từ mức Dễ nếu bạn muốn ôn luyện!</p>
+          <p className="text-sm text-foreground/50 mt-10">💡 Gợi ý: Bắt đầu từ mức Dễ để hiểu rõ kiến thức cơ bản!</p>
         </div>
       </div>
     );
@@ -325,39 +329,39 @@ export default function QuizGame() {
 
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="p-8 text-center border-2 border-primary rounded-xl bg-white shadow-sm">
-          <div className="flex justify-center mb-6">
-            <Trophy className="w-16 h-16 text-accent" />
+        <div className="p-10 text-center border-2 border-primary rounded-2xl bg-gradient-to-br from-white to-primary/5 shadow-xl">
+          <div className="flex justify-center mb-8">
+            <Trophy className="w-20 h-20 text-accent animate-bounce" />
           </div>
-          <h2 className="text-4xl font-bold mb-8 text-primary">Kết Quả</h2>
-          <div className="space-y-4 mb-8">
-            <div className="text-7xl font-bold text-primary">{percentage}%</div>
-            <div className="text-2xl text-foreground font-semibold">
+          <h2 className="text-5xl font-bold mb-10 text-primary">Kết Quả</h2>
+          <div className="space-y-6 mb-10">
+            <div className="text-8xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{percentage}%</div>
+            <div className="text-2xl text-foreground font-bold">
               Bạn trả lời đúng{" "}
-              <span className="text-secondary">
+              <span className="text-secondary font-extrabold">
                 {score}/{filteredQuestions.length}
               </span>{" "}
               câu
             </div>
-            <div className="text-xl text-secondary font-bold">
-              Tổng điểm: <span className="text-primary">{totalPoints}</span> điểm
+            <div className="text-2xl font-bold">
+              Tổng điểm: <span className="text-primary text-3xl">{totalPoints}</span> điểm 🎯
             </div>
-            <div className="text-lg font-semibold text-muted-foreground">Mức độ: {selectedDifficulty}</div>
+            <div className="text-lg font-semibold text-foreground/60">Mức độ: <span className="text-primary font-bold">{selectedDifficulty}</span></div>
           </div>
 
-          <div className="bg-primary/5 border border-primary p-6 rounded-lg mb-8">
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border-2 border-primary/30 p-8 rounded-xl mb-10">
             {percentage >= 80 && (
-              <p className="text-lg font-semibold text-primary">✓ Xuất sắc! Bạn hiểu rõ về lợi ích kinh tế!</p>
+              <p className="text-xl font-bold text-primary">🌟 Xuất sắc! Bạn hiểu rõ về lợi ích kinh tế!</p>
             )}
             {percentage >= 60 && percentage < 80 && (
-              <p className="text-lg font-semibold text-secondary">✓ Rất tốt! Bạn nắm vững kiến thức cơ bản.</p>
+              <p className="text-xl font-bold text-secondary">✓ Rất tốt! Bạn nắm vững kiến thức cơ bản.</p>
             )}
             {percentage >= 40 && percentage < 60 && (
-              <p className="text-lg font-semibold text-accent">✓ Khá tốt, nhưng hãy ôn lại các phần chưa rõ.</p>
+              <p className="text-xl font-bold text-accent">💪 Khá tốt! Hãy ôn lại các phần chưa rõ.</p>
             )}
             {percentage < 40 && (
-              <p className="text-lg font-semibold text-red-600">
-                Cần ôn lại nội dung học. Hãy quay lại mục &quot;Nội Dung&quot;!
+              <p className="text-xl font-bold text-secondary">
+                📚 Cần ôn lại nội dung. Quay lại &quot;Nội Dung&quot; để học thêm!
               </p>
             )}
           </div>
@@ -365,10 +369,10 @@ export default function QuizGame() {
           <div className="flex gap-4 justify-center flex-wrap">
             <button
               onClick={handleRestart}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary/90 text-white font-bold hover:shadow-lg transition-all transform hover:scale-105"
             >
               <RotateCcw className="w-5 h-5" />
-              Làm lại cùng mức độ
+              Làm Lại
             </button>
             <button
               onClick={() => {
@@ -378,9 +382,9 @@ export default function QuizGame() {
                 setShowResult(false);
                 setQuizFinished(false);
               }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary/5 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-all"
             >
-              Chọn mức độ khác
+              Chọn Mức Độ Khác
             </button>
           </div>
         </div>
@@ -394,28 +398,28 @@ export default function QuizGame() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-8">
-        <div className="flex justify-between items-center mb-4">
-          <span className="text-sm font-medium text-muted-foreground">
+      <div className="mb-10">
+        <div className="flex justify-between items-center mb-6">
+          <span className="text-sm font-bold text-primary">
             Câu {currentQuestion + 1}/{filteredQuestions.length}
           </span>
-          <span className={`text-sm font-bold px-4 py-2 rounded-full ${getDifficultyColor(selectedDifficulty)}`}>
+          <span className={`text-sm font-bold px-5 py-2 rounded-full ${getDifficultyColor(selectedDifficulty)}`}>
             {selectedDifficulty === "Dễ" && "🟢"} {selectedDifficulty === "Trung bình" && "🟡"}
             {selectedDifficulty === "Khó" && "🔴"} {selectedDifficulty} ({getPoints(selectedDifficulty)} điểm)
           </span>
         </div>
-        <div className="w-full bg-muted rounded-full h-3">
+        <div className="w-full bg-primary/15 rounded-full h-4 overflow-hidden">
           <div
-            className="bg-primary h-3 rounded-full transition-all duration-300"
+            className="bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-300"
             style={{ width: `${((currentQuestion + 1) / filteredQuestions.length) * 100}%` }}
           />
         </div>
       </div>
 
-      <div className="p-8 border-2 border-primary/30 rounded-xl bg-white shadow-sm">
-        <h2 className="text-2xl font-bold mb-8 text-foreground leading-relaxed">{question.text}</h2>
+      <div className="p-10 border-2 border-primary/15 rounded-2xl bg-white shadow-lg">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-primary leading-relaxed">{question.text}</h2>
 
-        <div className="space-y-3 mb-8">
+        <div className="space-y-4 mb-10">
           {question.options.map((option, index) => {
             const isCorrect = index === question.correct;
             const isSelected = currentAnswer?.selectedOption === index;
@@ -427,20 +431,20 @@ export default function QuizGame() {
                 key={index}
                 onClick={() => !isAnswered && handleAnswer(index)}
                 disabled={isAnswered}
-                className={`w-full p-4 text-left rounded-lg border-2 transition-all font-medium ${
+                className={`w-full p-5 text-left rounded-xl border-2 transition-all font-medium text-lg ${
                   showCorrect
-                    ? "border-green-500 bg-green-50 dark:bg-green-950 text-green-900 dark:text-green-100"
+                    ? "border-green-500 bg-green-100 text-green-900"
                     : showIncorrect
-                      ? "border-red-500 bg-red-50 dark:bg-red-950 text-red-900 dark:text-red-100"
+                      ? "border-red-500 bg-red-100 text-red-900"
                       : isSelected
-                        ? "border-primary bg-primary/10 text-foreground"
-                        : "border-primary/20 bg-card text-foreground hover:border-primary hover:bg-primary/5"
+                        ? "border-primary bg-primary/15 text-foreground"
+                        : "border-primary/20 bg-white text-foreground hover:border-primary hover:bg-primary/5"
                 } ${isAnswered ? "cursor-default" : "cursor-pointer"}`}
               >
                 <div className="flex items-center justify-between">
                   <span>{option}</span>
-                  {showCorrect && <CheckCircle className="w-5 h-5 text-green-600" />}
-                  {showIncorrect && <XCircle className="w-5 h-5 text-red-600" />}
+                  {showCorrect && <CheckCircle className="w-6 h-6 text-green-600" />}
+                  {showIncorrect && <XCircle className="w-6 h-6 text-red-600" />}
                 </div>
               </button>
             );
@@ -449,22 +453,22 @@ export default function QuizGame() {
 
         {showResult && (
           <div
-            className={`p-4 rounded-lg mb-8 border-l-4 ${
+            className={`p-6 rounded-xl mb-10 border-l-4 ${
               isAnswered && currentAnswer?.selectedOption === question.correct
-                ? "bg-green-50 dark:bg-green-950 border-l-green-500"
-                : "bg-red-50 dark:bg-red-950 border-l-red-500"
+                ? "bg-green-100 border-l-green-500"
+                : "bg-red-100 border-l-red-500"
             }`}
           >
             {currentAnswer?.selectedOption === question.correct ? (
-              <p className="text-green-900 dark:text-green-100 font-bold text-lg">✓ Chính xác!</p>
+              <p className="text-green-900 font-bold text-lg">✓ Chính xác! Rất tốt!</p>
             ) : (
-              <div className="space-y-2">
-                <p className="text-red-900 dark:text-red-100 font-bold text-lg">✗ Sai rồi!</p>
-                <p className="text-red-800 dark:text-red-200 text-sm">
+              <div className="space-y-3">
+                <p className="text-red-900 font-bold text-lg">✗ Sai rồi!</p>
+                <p className="text-red-800 text-base">
                   Đáp án đúng là: <span className="font-bold">{question.options[question.correct]}</span>
                 </p>
                 {question.hint && (
-                  <p className="text-red-700 dark:text-red-300 text-sm italic">💡 Gợi ý: {question.hint}</p>
+                  <p className="text-red-800 text-base">💡 Gợi ý: {question.hint}</p>
                 )}
               </div>
             )}
@@ -474,9 +478,9 @@ export default function QuizGame() {
         {isAnswered && (
           <button
             onClick={handleNext}
-            className="w-full px-6 py-3 rounded-lg bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-colors"
+            className="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-primary/90 text-white font-bold text-lg hover:shadow-lg transition-all"
           >
-            {currentQuestion === filteredQuestions.length - 1 ? "Xem Kết Quả" : "Câu Ti��p Theo →"}
+            {currentQuestion === filteredQuestions.length - 1 ? "🏆 Xem Kết Quả" : "Câu Tiếp Theo →"}
           </button>
         )}
       </div>
