@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const BulletPoint = ({ children }: { children: React.ReactNode }) => (
   <div className="flex gap-3 mb-4">
     <div className="flex-shrink-0 mt-1.5">
-      <div className="w-2 h-2 rounded-full bg-primary/60" />
+      <div className="w-2 h-2 rounded-full bg-secondary" />
     </div>
-    <div className="text-sm sm:text-base text-muted-foreground leading-relaxed">{children}</div>
+    <div className="text-sm sm:text-base text-foreground/80 leading-relaxed">{children}</div>
   </div>
 );
 
@@ -22,39 +22,39 @@ const SectionCard = ({
   children: React.ReactNode;
 }) => (
   <div className="animate-fade-up">
-    <div className="mb-4 flex items-center gap-3">
-      <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl">
+    <div className="mb-6 flex items-start gap-4">
+      <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-secondary to-secondary/80 text-white text-2xl flex-shrink-0 shadow-md">
         {icon}
       </div>
       <div>
-        <p className="text-sm font-semibold text-primary">Phần {number}</p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground">{title}</h2>
+        <p className="text-sm font-bold text-secondary uppercase tracking-wide">Phần {number}</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-1">{title}</h2>
       </div>
     </div>
-    <div className="pl-0 sm:pl-15">{children}</div>
+    <div className="pl-0 sm:pl-18 space-y-4">{children}</div>
   </div>
 );
 
 const SubsectionTitle = ({ children }: { children: React.ReactNode }) => (
-  <h3 className="text-lg sm:text-xl font-semibold text-foreground mt-6 mb-4 flex items-center gap-2">
+  <h3 className="text-xl sm:text-2xl font-bold text-primary mt-8 mb-4 flex items-center gap-2">
     {children}
   </h3>
 );
 
 export default function Content() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
+    <div className="min-h-screen bg-gradient-to-b from-background via-white to-background">
       <Header />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Nội Dung</h1>
-          <p className="text-lg text-muted-foreground">Tìm hiểu chi tiết về lợi ích kinh tế và vai trò của Nhà nước</p>
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        <div className="mb-16">
+          <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-4">Nội Dung</h1>
+          <p className="text-lg text-foreground/60">Khám phá chi tiết về lợi ích kinh tế và vai trò quan trọng của Nhà nước</p>
         </div>
 
         {/* Section II - Theory */}
         <section className="mb-16 sm:mb-24 scroll-mt-20">
-          <div className="bg-white rounded-xl border border-border p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border-2 border-primary/15 p-8 sm:p-12 shadow-lg hover:shadow-2xl transition-all duration-300">
             <SectionCard
               number="II"
               title="Lý Thuyết Về Các Quan Hệ Lợi Ích Kinh Tế Ở Việt Nam"
@@ -69,14 +69,14 @@ export default function Content() {
               <BulletPoint>
                 <strong>Phản ánh mục tiêu và động cơ hành động</strong> của mỗi người trong nền sản xuất xã hội.
               </BulletPoint>
-              <div className="mt-4 p-4 bg-slate-50 border-l-4 border-primary rounded">
-                <p className="text-foreground font-semibold">→ Lợi ích kinh tế là động lực trực tiếp của phát triển kinh tế – xã hội.</p>
+              <div className="mt-6 p-5 bg-gradient-to-r from-primary/10 to-accent/10 border-l-4 border-secondary rounded-lg">
+                <p className="text-foreground font-semibold text-primary">→ Lợi ích kinh tế là động lực trực tiếp của phát triển kinh tế – xã hội.</p>
               </div>
 
               <SubsectionTitle>
                 <span>2. Quan Hệ Lợi Ích Kinh Tế</span>
               </SubsectionTitle>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-sm sm:text-base text-foreground/75 mb-4 leading-relaxed">
                 Là mối quan hệ giữa các chủ thể trong việc tạo ra, phân phối và sử dụng lợi ích. Quan hệ này vừa thống nhất, vừa mâu thuẫn:
               </p>
               <BulletPoint>
@@ -110,15 +110,15 @@ export default function Content() {
 
         {/* Section III - State Role */}
         <section className="mb-16 sm:mb-24 scroll-mt-20">
-          <div className="bg-white rounded-xl border border-border p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border-2 border-primary/15 p-8 sm:p-12 shadow-lg hover:shadow-2xl transition-all duration-300">
             <SectionCard
               number="III"
               title="Vai Trò Của Nhà Nước Trong Điều Tiết Và Hài Hòa Lợi Ích"
               icon="🏛️"
             >
               <div className="space-y-8">
-                <div className="pb-6 border-b border-border last:border-b-0">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">1. Bảo Vệ Lợi Ích Hợp Pháp Của Các Chủ Thể</h3>
+                <div className="pb-6 border-b border-border/50 last:border-b-0">
+                  <h3 className="text-lg font-bold text-primary mb-3">1. Bảo Vệ Lợi Ích Hợp Pháp Của Các Chủ Thể</h3>
                   <BulletPoint>
                     Xây dựng pháp luật rõ ràng, tạo môi trường kinh doanh ổn định.
                   </BulletPoint>
@@ -127,8 +127,8 @@ export default function Content() {
                   </BulletPoint>
                 </div>
 
-                <div className="pb-6 border-b border-border last:border-b-0">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">2. Điều Hòa Lợi Ích Cá Nhân – Doanh Nghiệp – Xã Hội</h3>
+                <div className="pb-6 border-b border-border/50 last:border-b-0">
+                  <h3 className="text-lg font-bold text-primary mb-3">2. Điều Hòa Lợi Ích Cá Nhân – Doanh Nghiệp – Xã Hội</h3>
                   <BulletPoint>
                     Thực hiện qua chính sách thuế, tiền lương, phúc lợi, phân phối thu nhập.
                   </BulletPoint>
@@ -137,8 +137,8 @@ export default function Content() {
                   </BulletPoint>
                 </div>
 
-                <div className="pb-6 border-b border-border last:border-b-0">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">3. Kiểm Soát Và Ngăn Ngừa Quan Hệ Lợi Ích Tiêu Cực</h3>
+                <div className="pb-6 border-b border-border/50 last:border-b-0">
+                  <h3 className="text-lg font-bold text-primary mb-3">3. Kiểm Soát Và Ngăn Ngừa Quan Hệ Lợi Ích Tiêu Cực</h3>
                   <BulletPoint>
                     Ngăn chặn tham nhũng, lợi ích nhóm, cạnh tranh không lành mạnh.
                   </BulletPoint>
@@ -148,7 +148,7 @@ export default function Content() {
                 </div>
 
                 <div className="pb-0">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">4. Giải Quyết Mâu Thuẫn Lợi Ích</h3>
+                  <h3 className="text-lg font-bold text-primary mb-3">4. Giải Quyết Mâu Thuẫn Lợi Ích</h3>
                   <BulletPoint>
                     Phát hiện và xử lý sớm các xung đột.
                   </BulletPoint>
@@ -158,10 +158,10 @@ export default function Content() {
                 </div>
               </div>
 
-              <div className="mt-8 p-4 sm:p-6 bg-primary/5 border border-primary/20 rounded-lg">
-                <p className="font-semibold text-foreground">👉 Kết Luận:</p>
-                <p className="text-foreground leading-relaxed mt-2">
-                  Nhà nước giữ vai trò <strong>trung tâm</strong> trong việc định hướng, điều tiết và đảm bảo hài hòa các lợi ích kinh tế.
+              <div className="mt-8 p-6 bg-gradient-to-r from-secondary/5 to-accent/5 border-l-4 border-secondary rounded-xl">
+                <p className="font-bold text-secondary mb-2 text-lg">👉 Kết Luận</p>
+                <p className="text-foreground leading-relaxed">
+                  Nhà nước giữ vai trò <strong className="text-primary">trung tâm</strong> trong việc định hướng, điều tiết và đảm bảo hài hòa các lợi ích kinh tế.
                 </p>
               </div>
             </SectionCard>
@@ -170,65 +170,65 @@ export default function Content() {
 
         {/* Section IV - Relationships */}
         <section className="mb-16 sm:mb-24 scroll-mt-20">
-          <div className="bg-white rounded-xl border border-border p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-2xl border-2 border-primary/15 p-8 sm:p-12 shadow-lg hover:shadow-2xl transition-all duration-300">
             <SectionCard
               number="IV"
               title="Mối Quan Hệ Biện Chứng Giữa Lợi Ích Cá Nhân – Tập Thể – Xã Hội"
               icon="🔗"
             >
               <div className="space-y-8">
-                <div className="pb-6 border-b border-border">
-                  <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                <div className="pb-6 border-b border-border/50">
+                  <h3 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
                     <span className="text-xl">👤</span> Lợi Ích Cá Nhân
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-foreground/75 mb-4 leading-relaxed">
                     Là lợi ích của mỗi người lao động, nhà đầu tư hay người sản xuất.
                   </p>
-                  <div className="bg-slate-50 p-4 rounded-lg mb-4">
-                    <p className="text-foreground">→ Đây là <strong>động lực trực tiếp</strong> của sáng tạo, nâng cao năng suất và hiệu quả.</p>
+                  <div className="bg-gradient-to-r from-accent/20 to-accent/10 p-5 rounded-lg mb-4 border border-accent/30">
+                    <p className="text-foreground">→ Đây là <strong className="text-primary">động lực trực tiếp</strong> của sáng tạo, nâng cao năng suất và hiệu quả.</p>
                   </div>
-                  <p className="text-sm sm:text-base text-muted-foreground">
+                  <p className="text-sm sm:text-base text-foreground/75">
                     Tuy nhiên, nó phải <strong>gắn với lợi ích tập thể và xã hội</strong>, không thể tách rời hay đối lập.
                   </p>
                 </div>
 
-                <div className="pb-6 border-b border-border">
-                  <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                <div className="pb-6 border-b border-border/50">
+                  <h3 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
                     <span className="text-xl">👥</span> Lợi Ích Tập Thể
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-foreground/75 mb-4 leading-relaxed">
                     Là lợi ích của các tổ chức, doanh nghiệp, cộng đồng.
                   </p>
-                  <div className="bg-slate-50 p-4 rounded-lg mb-4">
-                    <p className="text-foreground">→ <strong>Giữ vai trò gắn kết</strong> các cá nhân, tạo sức mạnh hợp tác để cùng phát triển.</p>
+                  <div className="bg-gradient-to-r from-accent/20 to-accent/10 p-5 rounded-lg mb-4 border border-accent/30">
+                    <p className="text-foreground">→ <strong className="text-primary">Giữ vai trò gắn kết</strong> các cá nhân, tạo sức mạnh hợp tác để cùng phát triển.</p>
                   </div>
-                  <p className="text-sm sm:text-base text-muted-foreground">
+                  <p className="text-sm sm:text-base text-foreground/75">
                     Đồng thời, đây là <strong>cầu nối trung gian</strong> giữa lợi ích cá nhân và lợi ích xã hội.
                   </p>
                 </div>
 
                 <div className="pb-0">
-                  <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                  <h3 className="text-lg font-bold text-primary mb-3 flex items-center gap-2">
                     <span className="text-xl">🌍</span> Lợi Ích Xã Hội
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-foreground/75 mb-4 leading-relaxed">
                     Là lợi ích của quốc gia, dân tộc và toàn thể nhân dân.
                   </p>
-                  <div className="bg-slate-50 p-4 rounded-lg mb-4">
-                    <p className="text-foreground">→ <strong>Giữ vai trò định hướng và bao trùm</strong>, hướng sự phát triển kinh tế theo mục tiêu công bằng, văn minh và bền vững.</p>
+                  <div className="bg-gradient-to-r from-accent/20 to-accent/10 p-5 rounded-lg mb-4 border border-accent/30">
+                    <p className="text-foreground">→ <strong className="text-primary">Giữ vai trò định hướng và bao trùm</strong>, hướng sự phát triển kinh tế theo mục tiêu công bằng, văn minh và bền vững.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 space-y-4">
-                <div className="p-4 sm:p-6 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="p-6 bg-gradient-to-r from-primary/10 to-accent/10 border-l-4 border-primary rounded-lg">
                   <p className="text-foreground leading-relaxed">
-                    Ba loại lợi ích này <strong>thống nhất</strong> trong mục tiêu phát triển xã hội, nhưng có thể <strong>mâu thuẫn</strong> nếu lợi ích cá nhân hoặc nhóm vượt quá giới hạn chung.
+                    Ba loại lợi ích này <strong className="text-primary">thống nhất</strong> trong mục tiêu phát triển xã hội, nhưng có thể <strong className="text-secondary">mâu thuẫn</strong> nếu lợi ích cá nhân hoặc nhóm vượt quá giới hạn chung.
                   </p>
                 </div>
-                <div className="p-4 sm:p-6 bg-amber-50 border border-amber-200 rounded-lg">
+                <div className="p-6 bg-gradient-to-r from-secondary/5 to-accent/10 border-l-4 border-secondary rounded-lg">
                   <p className="text-foreground leading-relaxed">
-                    → Do đó, <strong>Nhà nước cần điều tiết hài hòa</strong>, đảm bảo công bằng, ổn định và phát triển bền vững.
+                    → Do đó, <strong className="text-primary">Nhà nước cần điều tiết hài hòa</strong>, đảm bảo công bằng, ổn định và phát triển bền vững.
                   </p>
                 </div>
               </div>
@@ -238,29 +238,29 @@ export default function Content() {
 
         {/* Section V - Conclusion */}
         <section className="mb-20 scroll-mt-20">
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/30 p-6 sm:p-10 shadow-sm">
+          <div className="bg-gradient-to-br from-secondary/10 via-accent/5 to-primary/10 rounded-2xl border-2 border-secondary/30 p-8 sm:p-12 shadow-lg">
             <SectionCard
               number="V"
               title="Kết Luận"
               icon="✨"
             >
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div className="flex gap-4 items-start">
-                  <div className="text-2xl">•</div>
+                  <div className="text-2xl text-secondary">✓</div>
                   <p className="text-base sm:text-lg text-foreground leading-relaxed">
-                    Lợi ích kinh tế là <strong>động lực phát triển mạnh mẽ</strong>, nhưng nếu không được quản lý tốt, nó sẽ trở thành <strong>nguồn gốc mâu thuẫn xã hội</strong>.
+                    Lợi ích kinh tế là <strong className="text-primary">động lực phát triển mạnh mẽ</strong>, nhưng nếu không được quản lý tốt, nó sẽ trở thành <strong className="text-secondary">nguồn gốc mâu thuẫn xã hội</strong>.
                   </p>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="text-2xl">•</div>
+                  <div className="text-2xl text-secondary">✓</div>
                   <p className="text-base sm:text-lg text-foreground leading-relaxed">
-                    Nhà nước XHCN Việt Nam có <strong>vai trò then chốt</strong> trong việc điều tiết, phân phối, kiểm soát và định hướng lợi ích theo nguyên tắc công bằng xã hội.
+                    Nhà nước XHCN Việt Nam có <strong className="text-primary">vai trò then chốt</strong> trong việc điều tiết, phân phối, kiểm soát và định hướng lợi ích theo nguyên tắc công bằng xã hội.
                   </p>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="text-2xl">•</div>
+                  <div className="text-2xl text-secondary">✓</div>
                   <p className="text-base sm:text-lg text-foreground leading-relaxed">
-                    <strong>Hài hòa lợi ích cá nhân – tập thể – xã hội</strong> chính là nền tảng để xây dựng nền <strong>kinh tế thị trường định hướng xã hội chủ nghĩa ổn định và bền vững</strong>.
+                    <strong className="text-primary">Hài hòa lợi ích cá nhân – tập thể – xã hội</strong> chính là nền tảng để xây dựng nền <strong className="text-primary">kinh tế thị trường định hướng xã hội chủ nghĩa ổn định và bền vững</strong>.
                   </p>
                 </div>
               </div>
@@ -272,10 +272,10 @@ export default function Content() {
         <section className="mb-20 flex justify-center">
           <Link
             to="/game"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-200"
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/90 text-white font-bold hover:shadow-2xl transition-all transform hover:scale-105 duration-200 text-lg shadow-lg"
           >
-            Đến Trò Chơi
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            Kiểm Tra Kiến Thức
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
@@ -283,10 +283,10 @@ export default function Content() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-slate-50">
+      <footer className="border-t-2 border-primary/10 bg-primary/2 mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <p className="text-muted-foreground text-sm">
-            © 2024 Lợi Ích Kinh Tế - Một nền kinh tế thị trường định hướng xã hội chủ nghĩa
+          <p className="text-foreground/60 text-sm font-medium">
+            © 2024 Lợi Ích Kinh Tế • Một nền kinh tế thị trường định hướng xã hội chủ nghĩa
           </p>
         </div>
       </footer>
