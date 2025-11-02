@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 const BulletPoint = ({ children, className }: { children?: React.ReactNode, className?: string }) => (

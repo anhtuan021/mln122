@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import QuizGame from "@/components/QuizGame";
+import Header from "../components/Header";
+import QuizGame from "../components/QuizGame";
 
 export default function Game() {
   return (

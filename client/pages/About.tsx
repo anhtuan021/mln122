@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "../components/Header";
 
 const FeatureCard = ({ icon, title, description }: { icon: string; title: string; description: string }) => (
   <div className="p-8">
