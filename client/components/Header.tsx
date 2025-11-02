@@ -49,6 +49,16 @@ export default function Header() {
             >
               Trò Chơi
             </Link>
+            <Link
+              to="/about"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                isActive("/about")
+                  ? "bg-primary text-white shadow-md"
+                  : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
+              }`}
+            >
+              Giới Thiệu
+            </Link>
           </nav>
         </div>
       </div>

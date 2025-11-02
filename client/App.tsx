@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Introduction from "./pages/Introduction";
 import Content from "./pages/Content";
 import Game from "./pages/Game";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,12 +21,12 @@ export default function App() {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Introduction />} />
-            <Route path="/content" element={<Content />} />
-            <Route path="/game" element={<Game />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Route path="/" element={<Introduction />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

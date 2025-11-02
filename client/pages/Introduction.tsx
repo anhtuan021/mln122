@@ -15,7 +15,7 @@ export default function Introduction() {
     <div className="min-h-screen bg-gradient-to-b from-background via-white to-background">
       <Header />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         {/* Hero Section */}
         <section className="mb-16 sm:mb-24 text-center animate-fade-in">
           <div className="inline-block mb-6">
@@ -36,7 +36,7 @@ export default function Introduction() {
 
         {/* Section I - Introduction */}
         <section className="mb-16 sm:mb-24 scroll-mt-20">
-          <div className="bg-white rounded-2xl border-2 border-primary/15 p-8 sm:p-12 shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div className="p-8 sm:p-12">
             <div className="animate-fade-up">
               <div className="mb-6 flex items-start gap-4">
                 <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-secondary to-secondary/80 text-white text-2xl flex-shrink-0 shadow-md">
@@ -59,7 +59,7 @@ export default function Introduction() {
                 </BulletPoint>
 
                 <div className="mt-8 p-6 bg-gradient-to-br from-secondary/5 to-accent/5 border-l-4 border-secondary rounded-xl">
-                  <p className="font-bold text-secondary mb-3 text-lg">👉 Câu Hỏi Đặt Ra</p>
+                  <p className="font-bold text-secondary mb-3 text-lg">Câu Hỏi Đặt Ra</p>
                   <p className="text-foreground leading-relaxed">
                     Làm sao để lợi ích kinh tế trở thành <strong>động lực phát triển chung</strong>, chứ không biến thành động lực riêng của một nhóm lợi ích?
                   </p>

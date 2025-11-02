@@ -274,7 +274,7 @@ export default function QuizGame() {
   if (!selectedDifficulty) {
     return (
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="p-10 border-2 border-primary text-center rounded-2xl bg-white shadow-xl">
+        <div className="p-10 text-center rounded-2xl">
           <div className="mb-10">
             <h2 className="text-5xl font-bold text-primary mb-4">Chọn Mức Độ Thử Thách</h2>
             <p className="text-xl text-foreground/70 mb-2">Bạn muốn thử thách mức độ nào?</p>
@@ -329,7 +329,7 @@ export default function QuizGame() {
 
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="p-10 text-center border-2 border-primary rounded-2xl bg-gradient-to-br from-white to-primary/5 shadow-xl">
+        <div className="p-10 text-center rounded-2xl">
           <div className="flex justify-center mb-8">
             <Trophy className="w-20 h-20 text-accent animate-bounce" />
           </div>
@@ -416,7 +416,7 @@ export default function QuizGame() {
         </div>
       </div>
 
-      <div className="p-10 border-2 border-primary/15 rounded-2xl bg-white shadow-lg">
+      <div className="p-10 rounded-2xl">
         <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-primary leading-relaxed">{question.text}</h2>
 
         <div className="space-y-4 mb-10">
