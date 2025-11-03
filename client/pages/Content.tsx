@@ -82,7 +82,7 @@ export default function Content() {
                 <strong>Phản ánh mục tiêu và động cơ hành động</strong> của mỗi
                 người trong nền sản xuất xã hội.
               </BulletPoint>
-              <div className="mt-6 p-5 bg-gradient-to-r from-primary/10 to-accent/10 border-l-4 border-secondary rounded-lg">
+              <div className="mt-6 p-5 bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-green-500 rounded-lg">
                 <p className="text-foreground font-semibold text-primary">
                   → Lợi ích kinh tế là động lực trực tiếp của phát triển kinh tế
                   – xã hội.
@@ -231,7 +231,7 @@ export default function Content() {
                     Là lợi ích của mỗi người lao động, nhà đầu tư hay người sản
                     xuất.
                   </p>
-                  <div className="bg-gradient-to-r from-accent/20 to-accent/10 p-5 rounded-lg mb-4 border border-accent/30">
+                  <div className="mt-6 p-5 bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-green-500 rounded-lg">
                     <p className="text-foreground">
                       → Đây là{" "}
                       <strong className="text-primary">
@@ -254,7 +254,7 @@ export default function Content() {
                   <p className="text-sm sm:text-base text-foreground/75 mb-4 leading-relaxed">
                     Là lợi ích của các tổ chức, doanh nghiệp, cộng đồng.
                   </p>
-                  <div className="bg-gradient-to-r from-accent/20 to-accent/10 p-5 rounded-lg mb-4 border border-accent/30">
+                  <div className="mt-6 p-5 bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-green-500 rounded-lg">
                     <p className="text-foreground">
                       →{" "}
                       <strong className="text-primary">
@@ -276,7 +276,7 @@ export default function Content() {
                   <p className="text-sm sm:text-base text-foreground/75 mb-4 leading-relaxed">
                     Là lợi ích của quốc gia, dân tộc và toàn thể nhân dân.
                   </p>
-                  <div className="bg-gradient-to-r from-accent/20 to-accent/10 p-5 rounded-lg mb-4 border border-accent/30">
+                  <div className="mt-6 p-5 bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-green-500 rounded-lg">
                     <p className="text-foreground">
                       →{" "}
                       <strong className="text-primary">
@@ -290,7 +290,7 @@ export default function Content() {
               </div>
 
               <div className="mt-8 space-y-4">
-                <div className="p-6 bg-gradient-to-r from-primary/10 to-accent/10 border-l-4 border-primary rounded-lg">
+                <div className="mt-6 p-5 bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-green-500 rounded-lg">
                   <p className="text-foreground leading-relaxed">
                     Ba loại lợi ích này{" "}
                     <strong className="text-primary">thống nhất</strong> trong
